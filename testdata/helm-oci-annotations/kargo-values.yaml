@@ -1,0 +1,33 @@
+# Local evaluation only. The admin password is "admin".
+api:
+  host: localhost:8080
+  tls:
+    enabled: false
+  adminAccount:
+    passwordHash: '$2a$10$Zrhhie4vLz5ygtVSaif6o.qN36jgs6vjtMBdM6yrU1FOeiAAMMxOm'
+    tokenSigningKey: helm-oci-annotations-local-test-only
+  rollouts:
+    integrationEnabled: false
+controller:
+  argocd:
+    integrationEnabled: false
+  rollouts:
+    integrationEnabled: false
+externalWebhooksServer:
+  enabled: false
+database:
+  postgres:
+    password: local-test-only
+    persistence:
+      enabled: false
+nats:
+  config:
+    cluster:
+      enabled: false
+  container:
+    resources:
+      requests:
+        cpu: 100m
+        memory: 128Mi
+      limits:
+        memory: 512Mi

@@ -1,0 +1,13 @@
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Warehouse
+metadata:
+  name: fluxcd
+  namespace: helm-oci-annotations
+spec:
+  interval: 1m0s
+  freightCreationPolicy: Automatic
+  subscriptions:
+  - chart:
+      repoURL: oci://codeberg.org/kejne/charts/fluxcd
+      semverConstraint: '=0.1.1'
+      discoveryLimit: 1

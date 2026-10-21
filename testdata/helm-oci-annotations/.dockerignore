@@ -1,0 +1,3 @@
+# The runtime build only copies from the builder image, never from this context.
+**
+!Dockerfile

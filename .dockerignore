@@ -1,2 +1,3 @@
 docs/
 ui/node_modules/
+testdata/helm-oci-annotations/.state/
